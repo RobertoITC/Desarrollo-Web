@@ -1,0 +1,131 @@
+
+
+
+body {
+
+  background-size: cover;
+
+
+  background: #F2EBE3 url('img/Datatype.webp') no-repeat fixed center center;
+}
+
+.grid{
+  align-content: center;
+  line-height: 20px;
+  padding-left: 30%;
+  padding-right: 30%;
+  display: grid;
+}
+
+
+h1{
+  font-family:sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+h2{
+  font-family:sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  justify-content: center;
+  color: rgb(107, 107, 107);
+  font-weight: 400;
+  text-align: justify;
+
+
+}
+
+.image-container {
+  align-content: center;
+  padding-left: 20%;
+  padding-right: 20%;
+
+  width: 400px;
+  height: 200px;
+  display: flex;
+
+}
+
+.list-container{
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: black;
+  align-items:center ;
+  line-height: 30px;
+  text-justify: distribute;
+  padding-right: 10%;
+  padding-left: 10%;
+  background-color: #ffd59e;
+  border-radius: 5%;
+  border-color: black;
+  border-width: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.list-container-java{
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: black;
+  line-height: 30px;
+
+  text-justify: distribute;
+  padding-right: 10%;
+  background-color: #ffd59e;
+  border-radius: 5%;
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+
+}
+
+p{
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif
+;
+  color: rgb(36, 36, 36);
+  font-weight: 400;
+  text-align: justify;
+
+}
+
+h3{
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+
+}
+
+.navigation-bar{
+  display: flex;
+  border-radius: 15px;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  align-items: center;
+
+  background-color: #ffd59e;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.navigation-bar a{
+  color: black;
+  font-weight: 400;
+  font-family: 'Sohne', sans-serif;
+
+
+}
+
+.navigation-bar a:hover{
+  color: #F2EBE3;
+}
+
+
+
+.image-container2{
+  align-content: center;
+  justify-content: center;
+  width: 600px;
+  height: 200px;
+  display: flex;
+
+}
