@@ -1,0 +1,205 @@
+
+
+@font-face {
+    font-family: 'Pokemon GB'; /* Use a name for your font family */
+    src: url('src/fonts/Pokemon_GB 2/Pokemon_GB.woff') format('woff'); /* Fallback for older browsers */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+}
+.head{
+    font-family: 'Pokemon GB';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+}
+.bckgrnd{
+    width: 100%;
+    height: 100%;
+    background-image: url("src/assets/bckgrnd1.webp");
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layout-game{
+    width: 400px;
+    height: 550px;
+    border: solid 5px black;
+    border-radius: 3% 3% 19% 3%;
+    background-color: #D9D4D5;
+    box-shadow: 15px 15px 5px rgba(0,0,0,0.49);
+}
+
+
+.screen-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.screen-layout{
+    width: 100%;
+    height: 200px;
+    border: solid 5px black;
+    background-color: #9C9F4C;
+    border-radius: 3% 3% 3% 3%;
+
+
+    overflow-y: scroll;
+}
+
+.pokemon-container{
+    display: flex;
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+}
+
+
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.container-dpad{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 100%;
+}
+.dpad-center{
+    background-color: #000000;
+}
+
+.dpad-death{
+
+}
+
+.dpad-up{
+background-color: black;
+}
+
+.dpad-down{
+    background-color: black;
+
+}
+
+.dpad-left {
+    background-color: black;
+
+}
+
+.dpad-right {
+
+    background-color: black;
+}
+
+    .container-select{
+
+    width: 100px;
+    height: 100px;
+
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40%;
+
+}
+
+.container-action{
+    width: 100px;
+    height: 100px;
+
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+.button-a-container{
+    padding-bottom: 50%;
+}
+.button-b-container{
+
+    padding-top: 50%;
+
+}
+
+.button-a{
+    width: 40px;
+    height: 40px;
+    background-color: #74041E;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+
+}
+
+.button-b{
+    width: 40px;
+    height: 40px;
+    background-color: #74041E;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+
+}
+
+.button-select-container{
+    transform: rotate(-45deg);
+}
+
+.button-start-container{
+    transform: rotate(-45deg)
+}
+
+.button-select{
+    width: 30px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+
+}
+
+.button-start{
+    width: 30px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+
+}
+
+.poke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Pokemon GB", verdana, helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    margin: 2%;
+    border-radius: 10px;
+
+}
+
