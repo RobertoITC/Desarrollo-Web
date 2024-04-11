@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de prueba</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<div class="navigation-bar">
+    <a href="Java-Script-Data-Types.html">Java Script Data Types</a>
+    <a href="Ejemplo-HTML.html">Ejemplo HTML</a>
+    <a href="Pruebas.html">Website completo</a>
+    <a href="Slides%20de%20HTML.html">Slides HTML & CSS</a>
+    <a href="Java-Script-Loops-&-Slides.html">Java Script Loops & Slides</a>
+    <a href="React-Hooks-JSX.html">React</a>
+
+</div>
+
+<div class="grid">
+    <h1>React, hooks, JSX</h1>
+    <div class="image-container">
+        <img src="https://www.dongee.com/tutoriales/content/images/2023/11/image-62.png" alt="react">
+    </div>
+    <div class="list-container">
+        <h3>Index</h3>
+
+        <ul>
+            <li><a href="#React">React</a></li>
+            <li><a href="#Hooks">Hooks</a></li>
+
+            <li><a href="#DataStrctr">Data Structure: Objects and Arrays</a></li>
+            <li><a href="#Methods">Methods</a></li>
+
+        </ul>
+
+
+    </div>
+
+    <h3 id="DataStrctr">Data Structure: Objects and Arrays</h3>
+
+    <p>Numbers, Booleans, and strings are the atoms from which data structures are built.
+    </p>
+    <p><b>Data Sets</b></p>
+    <p>To work with a chunk of digital data, we first have to find a way to represent it in our machine’s memory. Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11.
+    </p>
+    <p>et listOfNumbers = [2, 3, 5, 7, 11];</p>
+    <p>console.log(listOfNumbers[2]);<br />
+        console.log(listOfNumbers[0]);<br />
+        console.log(listOfNumbers[2 - 1]);
+    </p>
+    <h3 id="Methods">Methods</h3>
+    <p>Both string and array values contain, in addition to the length property, a number of properties that hold function values.
+    </p>
+    <p>let doh='Doh'</p>
+    <p>console.log(typeof doh.toUpperCase);
+    </p>
+    <p>console.log(doh.toUpperCase());
+    </p>
+    <p>This example demonstrates two methods you can use to manipulate arrays:
+    </p>
+    <p>let sequence = [1, 2, 3];
+    </p>
+    <p>equence.push(4);<br />
+        sequence.push(5);<br /><br />
+
+        console.log(sequence);<br />
+        console.log(sequence.pop());<br />
+        console.log(sequence);
+    </p>
+
+    <h3>Objects</h3>
+    <p>The binary in operator, when applied to a string and an object, tells you whether that object has a property with that name.
+    </p>
+    <p>let anObject = {left: 1, right: 2};<br />
+        console.log(anObject.left);<br />
+        // → 1<br />
+        delete anObject.left;<br />
+        console.log(anObject.left);<br />
+
+        console.log("left" in anObject);<br />
+        console.log("right" in anObject);
+    </p>
+    <p>To find out what properties an object has, you can use the Object.keys function.
+    </p>
+    <p>console.log(Object.keys({x: 0, y: 0, z: 2}));
+    </p>
+
+    <h3 id="React">React</h3>
+    <p>The library for web and native user interfaces.
+    </p>
+    <p>React lets you build user interfaces out of individual pieces called components.
+    </p>
+    <p>Create your own <b>React components</b> like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.
+    </p>
+
+    <div class="image-container">
+        <img src="SlideIMG/img_23.png" alt="1">
+    </div>
+    <h3>Components</h3>
+    <p>React components are JavaScript functions. Want to show some content conditionally?
+        Use an if statement. Displaying a list? Try array map(). </p>
+    <div class="image-container">
+        <img src="SlideIMG/img_24.png" alt="1">
+    </div>
+
+    <h3 id="Hooks">Hooks</h3>
+    <p>Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own.
+    </p>
+    <p><b>State Hooks</b></p>
+    <p>State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.</p>
+    <p><b>Effect Hooks</b></p>
+    <p>Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.
+    </p>
+    <a href="https://react.dev/reference/react/hooks">Reference</a>
+    <h3>State</h3>
+    <p>Components often need to change what is displayed on the screen as a result of interaction. Writing inside a form should update the text field, clicking "next" in an image carousel should change the displayed image; clicking a button to purchase a product should update the shopping cart. Components need to "remember" things: the text field, the current image, the shopping cart.
+    </p>
+    <p><b>In React, this type of memory within components is known as state.
+    </b></p>
+    <a href="https://es.react.dev/learn/state-a-components-memory">Reference</a>
+    <h3>useState</h3>
+    <p>The useState hook provides two things:
+    </p>
+    <ol>
+        <li>A state variable to maintain data between renders.
+        </li>
+        <li>A function to set the state to update the variable and trigger React to re-render the component.
+        </li>
+
+    </ol>
+    <p>const [index, setIndex]= useState(0);</p>
+    <p>index is a state variable and  setIndex is the function that sets the state.
+    </p>
+    <p>
+        const [index, setIndex] = useState(0);<br />
+
+        function handleClick() {<br />
+        setIndex(index + 1);<br />
+        }
+    </p>
+    <a href="https://es.react.dev/learn/state-a-components-memory">Reference</a>
+    <h3>useEffect</h3>
+    <p>Connecting to an external system
+    </p>
+    <p>Some components need to stay connected to the network, some browser API, or a third-party library, while they are displayed on the page. These systems aren’t controlled by React, so they are called external.
+    </p>
+    <div class="image-container">
+        <img src="SlideIMG/img_25.png" alt="1">
+    </div>
+    <a href="https://es.react.dev/">Reference 1</a>
+    <a href="https://es.react.dev/learn">Reference 2</a>
+    <a href="https://es.react.dev/learn/state-a-components-memory">Reference 3</a>
+
+
+
+</div>
+
