@@ -1,5 +1,5 @@
 
-import '/Users/robertomoralesnieto/poke-project/src/App.css'
+import './pokeStyles.css';
 
 const ScreenPokemones = ({pokemones,position}) => {
 

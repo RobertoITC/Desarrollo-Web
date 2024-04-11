@@ -52,15 +52,6 @@
     overflow-y: scroll;
 }
 
-.pokemon-container{
-    display: flex;
-    width: 100%;
-
-    flex-wrap: wrap;
-
-    justify-content: flex-start;
-
-}
 
 
 
@@ -190,16 +181,5 @@ background-color: black;
 
 }
 
-.poke{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Pokemon GB", verdana, helvetica, sans-serif;
-    font-size: 9px;
-    font-weight: 500;
-    margin: 2%;
-    border-radius: 10px;
 
-}
 
