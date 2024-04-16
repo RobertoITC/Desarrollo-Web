@@ -10,7 +10,6 @@ function App() {
     const[myPokeSelection,setMyPokes]=useState([]);
     const[computerRandomSelection,setComputerRandomSelection]=useState([]);
     const[startGame,setStartGame]=useState(false);
-    /*const[]=useState(false);*/
     const[myHealth,setMyHealth]=useState(100);
     const[enemyHealth, setEnemyHealth]=useState(100);
     const pokeUrl='https://pokeapi.co/api/v2/pokemon';
