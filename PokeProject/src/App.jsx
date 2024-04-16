@@ -56,6 +56,8 @@ function App() {
 
     const handleStart=()=>{
         setStartGame(true);
+        setEnemyHealth(100);
+        setMyHealth(100);
 
     }
 

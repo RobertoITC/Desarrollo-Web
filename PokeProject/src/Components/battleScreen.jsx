@@ -7,12 +7,18 @@ const battleScreen = ({myPokeSelection, computerRandomSelection, myHealth, enemy
     return(
         <div className='battleContainer'>
             <div className='enemyContainer'>
-                <h1>{enemyHealth}</h1>
+                <div className='textUI'>
+                    <h1 className={'pokeFont'}>{enemyHealth} HP<br />{computerRandomSelection[0].name}</h1>
+
+                </div>
                 <img src={computerRandomSelection[0].sprites.front_default} alt={'enemy slection'}></img>
             </div>
             <div className='myContainer'>
-                <h1>{myHealth}</h1>
+
                 <img src={myPokeSelection[0].sprites.back_default} alt={'my'}></img>
+                <div className='textUI'>
+                    <h1 className={'pokeFont'}>{myHealth} HP<br/>{myPokeSelection[0].name}</h1>
+                </div>
             </div>
         </div>
 
