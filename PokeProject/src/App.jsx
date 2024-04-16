@@ -2,13 +2,22 @@
 import './App.css'
 import {useEffect, useState} from "react";
 import ScreenPokemones from "./Components/ScreenPokemones.jsx";
+import BattleScreen from "./Components/battleScreen.jsx";
 
 function App() {
     const [pokemones,setPokemones]=useState('');
     const [position,setPosition]=useState(0);
     const[myPokeSelection,setMyPokes]=useState([]);
+    const[computerRandomSelection,setComputerRandomSelection]=useState([]);
+    const[startGame,setStartGame]=useState(false);
     /*const[]=useState(false);*/
+    const[myHealth,setMyHealth]=useState(100);
+    const[enemyHealth, setEnemyHealth]=useState(100);
     const pokeUrl='https://pokeapi.co/api/v2/pokemon';
+
+    const timeout = async (delay) => {
+        return new Promise( res => setTimeout(res, delay) );
+    }
     const fetchData= async (url) => {
         const response= await fetch(url);
         const data = await response.json();
@@ -29,11 +38,11 @@ function App() {
     }
 
     const filterSelection=()=>{
-        console.log(position);
-        console.log(pokemones);
+        //console.log(position);
+        //console.log(pokemones);
         const mySelection=pokemones.filter((value,idx)=>position===idx)
         setMyPokes(mySelection);
-        console.log(mySelection);
+        //console.log(mySelection);
         computerSelection();
     }
 
@@ -41,7 +50,43 @@ function App() {
         const computerPos=Math.floor(Math.random()*20);
         console.log(computerPos);
         const computerSelection =pokemones.filter((value,idx)=>computerPos===idx)
+        setComputerRandomSelection(computerSelection)
         console.log(computerSelection);
+    }
+
+    const handleStart=()=>{
+        setStartGame(true);
+
+    }
+
+    const handleAttack=async ()=> {
+        if (myHealth > 0 && enemyHealth > 0) {
+            const tempEnemyHealth=enemyHealth -  Math.floor(Math.random() * 20);
+            if(tempEnemyHealth<0){
+                setEnemyHealth(0);
+                return;
+            }
+
+            setEnemyHealth(tempEnemyHealth);
+            await timeout(100);
+
+
+            const tempHealth=myHealth - Math.floor(Math.random() * 20);
+            if(tempHealth<0){
+                setMyHealth(0);
+                return;
+            }
+            setMyHealth(tempHealth);
+
+
+
+        }
+        else{
+            await timeout(1000);
+            setStartGame(false);
+        }
+
+
     }
 
     const pokemonData = async (pokeUrl)=>{
@@ -72,7 +117,19 @@ function App() {
                     <div className={'layout-game'}>
                         <div className={'screen-container'}>
                             <div className={'screen-layout'}>
-                                {pokemones &&<ScreenPokemones pokemones={pokemones} position={position} />}
+
+                                {
+                                    startGame ? (
+
+
+                                    <BattleScreen myPokeSelection={myPokeSelection} computerRandomSelection={computerRandomSelection} myHealth={myHealth} enemyHealth={enemyHealth}/>
+
+                                    ):(
+                                        pokemones &&(<ScreenPokemones pokemones={pokemones} position={position} />)
+                                    )
+
+
+                                }
                             </div>
                         </div>
 
@@ -97,7 +154,7 @@ function App() {
 
                                 </div>
                                 <div className={'button-start-container'}>
-                                    <button className={'button-start'}></button>
+                                    <button className={'button-start'} onClick={()=>handleStart()}></button>
                                     <div>Start</div>
                                 </div>
                             </div>
@@ -111,7 +168,7 @@ function App() {
                                 </div>
 
                                 <div className={'button-a-container'}>
-                                    <button className={'button-a'}> A</button>
+                                    <button className={'button-a'} onClick={()=>handleAttack()}> A</button>
 
 
 
