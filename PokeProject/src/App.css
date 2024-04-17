@@ -15,8 +15,10 @@
 .bckgrnd{
     width: 100%;
     height: 100%;
+
     background-image: url("./assets/Background2.webp");
-    background-repeat: repeat;
+
+
 }
 
 
@@ -34,6 +36,8 @@
     border-radius: 3% 3% 19% 3%;
     background-color: #D9D4D5;
     box-shadow: 15px 15px 5px rgba(0,0,0,0.49);
+
+
 }
 
 
@@ -49,8 +53,7 @@
     border: solid 5px black;
     background-color: #9C9F4C;
     border-radius: 3% 3% 3% 3%;
-
-
+    filter:sepia(0.9) contrast(0.9) hue-rotate(45deg) brightness(0.8);
     overflow-y: scroll;
 }
 
