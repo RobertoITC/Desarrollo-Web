@@ -9,11 +9,13 @@ function App() {
 
   return (
       <Routes>
-          <Route path="/" element={<Register />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/dashboard" element={<Dashboard />}/>
+          <Route path="/login" element={<Register />}/>
+          <Route path="/que" element={<Login />}/>
+          <Route path="/" element={<Dashboard />}/>
       </Routes>
   )
 }
+
+
 
 export default App
