@@ -32,6 +32,7 @@ function registerUser(){
     let passwordCifrada = cesarCipher(password,7);
     console.log("Password cifrada: ",passwordCifrada);
 
+
     addUser(userName,passwordCifrada);
 
 }
