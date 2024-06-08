@@ -10,7 +10,7 @@ async function getResponseChat(req, res) {
     const stream=await openai.chat.completions.create({
         model:"gpt-3.5-turbo",
         messages:[
-            {role:"system",content:"You are an expert Dungeon Master and can answer any question about Dungeons and Dragons"},
+            {role:"system",content:"You are an expert Dungeon Master and can answer any question about Dungeons and Dragons in less than 800 characters"},
             {role:'user', content:prompt},
         ],
         stream:true,

@@ -11,7 +11,7 @@ const CardInfo = ({user}) => {
 
 
             <img src={userImage} alt={'avatar'} className={'p-2 w-[70px]'}/>
-            <p className={'font-bold text-lg text'}>Nombre</p>
+            <p className={'font-bold text-lg text'}>Name</p>
             <p className={'font-mono'}>{user.name}</p>
             <p className={'font-bold text-lg'}>Email</p>
             <p className={'font-mono'}>{user.email}</p>

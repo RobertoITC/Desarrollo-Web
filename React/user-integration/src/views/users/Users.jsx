@@ -179,7 +179,7 @@ const Users = () => {
                             name={'contextRAG'}
                             onChange={handleInputChange}
                             readOnly={true}
-                            className={'w-[200px] h-[200px] pl-2 pr-2 text-justify font-mono border-2 border-[#399c7f]/80 rounded-md italic'}
+                            className={'w-[200px] h-[200px] pl-2 pr-2 text-sm font-mono border-2 border-[#399c7f]/80 rounded-md italic'}
                         />
                         <button
                             className={"h-10 w-fit pl-2 pr-2 mt-2 text-white bg-[#399c7f] border-none text-md rounded-md cursor-pointer ml-6"}
