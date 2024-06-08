@@ -16,7 +16,6 @@ const Users = () => {
     });
 
     const [isLoadingGenerate, setIsLoadingGenerate] = useState(false);
-    const [isLoadingSave, setIsLoadingSave] = useState(false);
 
     const [descriptions, setDescriptions]=useState([]);
 
@@ -48,17 +47,9 @@ const Users = () => {
     };
     useEffect(() => {
         fetchDescription();
-        fetchFeedback();
         fetchUsersById()
     }, []);
 
-    const fetchFeedback=async () =>{
-        console.log("ID from users",id);
-        console.log("Fetch Feedback");
-        const res = await fetch(UrlLocalhost+'feedback/'+id);
-        const data = await res.json();
-        console.log(data);
-    }
 
     const handleInputChange=(e)=>{
         const{name, value} = e.target;
@@ -202,30 +193,31 @@ const Users = () => {
                 </div>
                 <div className={'flex justify-center mr-[125px]'}>
                     <button
-                        className={"h-10 w-20 mt-2 text-white bg-[#399c7f] border-none text-md rounded-md cursor-pointer ml-4"}
-                        type={'submit'}
+                        className={`h-10 w-24 mt-2 mr-3 text-white bg-[#399c7f] hover:bg-[#2f7a5f] border-none text-md rounded-md cursor-pointer ${isLoadingGenerate ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        type="submit"
                         onClick={handleGenerateHelp}
-
-
-                    >{isLoadingGenerate ? "Loading..." : "Generate"}
+                        disabled={isLoadingGenerate}
+                    >
+                        {isLoadingGenerate ? 'Loading...' : 'Generate'}
                     </button>
+
                     <button
-                        className={"h-10 w-20 mt-2 text-white bg-[#399c7f] border-none text-md rounded-md cursor-pointer ml-4"}
-                        type={'submit'}
+                        className={`h-10 w-24 mt-2 mr-8 text-white bg-[#399c7f] hover:bg-[#2f7a5f] border-none text-md rounded-md cursor-pointer ${isLoadingGenerate ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        type="submit"
                         onClick={handleSaveGeneration}
-
-
-                    >{isLoadingGenerate ? "Loading..." : "Save"}
+                        disabled={isLoadingGenerate}
+                    >
+                        {isLoadingGenerate ? 'Loading...' : 'Save'}
                     </button>
 
                 </div>
             </div>
 
 
-        </div>
+    </div>
 
 </div>
-            </NavigationBar>
+        </NavigationBar>
     )
 
 
